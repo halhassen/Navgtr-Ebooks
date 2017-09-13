@@ -1,0 +1,20 @@
+{
+  "name": "navgtr_ebooks",
+  "version": "1.0.0",
+  "description": "George Wood Twitter Bot",
+  "main": "tweets.js",
+  "scripts": {
+    "start": "server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halhassen/Navgtr-Ebooks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/halhassen/Navgtr-Ebooks/issues"
+  },
+  "homepage": "https://github.com/halhassen/Navgtr-Ebooks#readme"
+}
