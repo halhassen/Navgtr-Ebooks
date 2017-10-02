@@ -4,7 +4,7 @@
   "description": "George Wood Twitter Bot",
   "main": "tweets.js",
   "scripts": {
-    "start": "server.js",
+    "start": "tweets.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
