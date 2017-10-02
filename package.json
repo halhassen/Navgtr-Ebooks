@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/halhassen/Navgtr-Ebooks/issues"
   },
-  "homepage": "https://github.com/halhassen/Navgtr-Ebooks#readme"
+  "homepage": "https://github.com/halhassen/Navgtr-Ebooks#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0"
+  }
 }

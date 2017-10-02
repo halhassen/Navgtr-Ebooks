@@ -1,14 +1,17 @@
 var restclient = require('node-restclient');
 var Twit = require('twit');
 var app = require('express').createServer();
+var PORT = process.env.PORT || 3000;
+// Load environment variables
+require('dotenv').load();
 
-
+console.log(process.env.CONSUMER_KEY)
 // insert your twitter app info here
 var T = new Twit({
-  consumer_key:         'dSN8d5Cskr0Br71eHe1BGNBNi', 
-  consumer_secret:      'gYKM6YEEFnKuPxdpy98HJw8iPrjBNojOiVBiKXEQe9imj1OrWU',
-  access_token:         '879948198583844864-1Ts7B8gKpCHruDtG2cSKEJDTCybf8Yb',
-  access_token_secret:  'voK5pk62MsHziQtWLoQzPEmmW6JOy2iCHcMlpO9wMPzVu'
+	consumer_key:         process.env.CONSUMER_KEY, 
+	consumer_secret:      process.env.CONSUMER_SECRET,
+	access_token:         process.env.ACCESS_TOKEN,
+	access_token_secret:  process.env.ACCESS_TOKEN_SECRET
 });
 
 
@@ -72,7 +75,8 @@ var gwQuotes = [
 "The play control in this area is awful.",
 "So keep watching the show for more coverage of that famous mustachioed plumber.",
 // Earthworm Jim 2
-"If you didn't get enough booger action in Interplay's Booger Man, you might want to check out all the snot in Earthworm Jim 2 from Playmates",
+"If you didn't get enough booger action in Interplay's Booger Man,", 
+"You might want to check out all the snot in Earthworm Jim 2 from Playmates",
 "Earthworm Jim is a nutty character",
 "Plain old earthworm that becomes a superhero earthworm with an attitude, thanks to the powers of a mysterious spacesuit.",
 "The premise may remind you of The Mask.",
@@ -289,15 +293,15 @@ var gwQuotes = [
 ];
 
 Array.prototype.randomElement = function () {
-  return this[Math.floor(Math.random() * this.length)]
+	return this[Math.floor(Math.random() * this.length)]
 }
 
 // Below function is used to test if any quotes in the array are more than 140 characters
 function tweetCheck(arr) {
-  var characterCheck = arr.filter(function(quote) {
-    return quote.length > 140;
-  })
-  return characterCheck;
+	var characterCheck = arr.filter(function(quote) {
+		return quote.length > 140;
+	})
+	return characterCheck;
 }
 
 console.log(tweetCheck(gwQuotes));
@@ -307,9 +311,9 @@ console.log(tweetCheck(gwQuotes));
 var finishedQuotes = [];
 
 function georgeTweet() {
-  if(finishedQuotes.length == gwQuotes.length) {
-    finishedQuotes = [];
-  }
+	if(finishedQuotes.length == gwQuotes.length) {
+		finishedQuotes = [];
+	}
   // Goes through every quote randomly once through the array, then does the array again
 
   var randomQuote = gwQuotes.randomElement();
@@ -317,16 +321,16 @@ function georgeTweet() {
   
   // If it keeps finding the quote was already tweeted, keep randomizing
   while(quoteCheck > -1) {
-    randomQuote = gwQuotes.randomElement();
-    quoteCheck = finishedQuotes.indexOf(randomQuote);
+  	randomQuote = gwQuotes.randomElement();
+  	quoteCheck = finishedQuotes.indexOf(randomQuote);
   }
   finishedQuotes.push(randomQuote);
     // Below is the function that posts a tweet
     T.post('statuses/update', { status: randomQuote}, function(err, reply) {
-      console.log("error: " + err);
+      //console.log("error: " + err);
       console.log("reply: " + randomQuote);
-    });
-  }
+  });
+}
 
 
 // Functionality if I want to include favoriting quote retweets of my tweets
@@ -344,13 +348,13 @@ function georgeTweet() {
 // handling. it just won't tweet.
 // 1800000 equals 30 minutes
 setInterval(function() {
-  try {
-    georgeTweet();
-  }
-  catch (e) {
-    console.log(e);
-  }
-},1800000);
+	try {
+		georgeTweet();
+	}
+	catch (e) {
+		console.log(e);
+	}
+},10000);
 
 
 
