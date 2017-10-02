@@ -5,7 +5,6 @@ var PORT = process.env.PORT || 3000;
 // Load environment variables
 require('dotenv').load();
 
-console.log(process.env.CONSUMER_KEY)
 // insert your twitter app info here
 var T = new Twit({
 	consumer_key:         process.env.CONSUMER_KEY, 
