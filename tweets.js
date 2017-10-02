@@ -354,7 +354,7 @@ setInterval(function() {
 	catch (e) {
 		console.log(e);
 	}
-},10000);
+},1800000);
 
 
 
