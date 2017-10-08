@@ -1,7 +1,11 @@
 var restclient = require('node-restclient');
 var Twit = require('twit');
-var app = require('express').createServer();
-var PORT = process.env.PORT || 3000;
+// START HEROKU SETUP
+var express = require("express");
+var app = express();
+app.get('/', function(req, res){ res.send('George Wood is happily running.'); });
+app.listen(process.env.PORT || 5000);
+// END HEROKU SETUP
 // Load environment variables
 require('dotenv').load();
 
@@ -47,7 +51,7 @@ var gwQuotes = [
 "Oddly, removing the dagger results in the dragon's death.",
 "You play Lara Croft, complete with front-loaded anvils.",
 "Front-loaded anvils",
-"That snowspeeder kicks some major you know what.2",
+"That snowspeeder kicks some major you know what.",
 "This is good because that way everybody is happy.",
 "We knew the game would be great and it is.",
 "We've only just scratched the surface.",
