@@ -3,6 +3,8 @@ Tweets Every 30 Minutes!
 
 Requires [node](http://nodejs.org/) and [npm](http://npmjs.org/). You also need a Twitter App access token, consumer key, and associated secrets: https://dev.twitter.com/apps/new
 
+This app is deployed on Heroku and runs online from there.
+
 (You'll need to add all that info to tweets.js before running the program, otherwise Wordnik and Twitter won't play nice. Don't worry, it's all commented.)
 
 > npm install node-restclient@0.0.1
@@ -11,4 +13,4 @@ Requires [node](http://nodejs.org/) and [npm](http://npmjs.org/). You also need 
 
 > npm install express@2.5.9
 
-> node metaphor.js
+> node tweets.js
