@@ -3,7 +3,7 @@ var Twit = require('twit');
 // START HEROKU SETUP
 var express = require("express");
 var app = express();
-app.get('/', function(req, res){ res.send('George Wood is happily running.'); });
+app.get('/', function(req, res){ res.send(georgeTweet()); });
 app.listen(process.env.PORT || 5000);
 // END HEROKU SETUP
 // Load environment variables
@@ -339,7 +339,7 @@ function georgeTweet() {
 // Functionality if I want to include favoriting quote retweets of my tweets
 // function favRTs () {
 //   T.get('statuses/retweets_of_me', {}, function (e,r) {
-//     for(var i=0;i<r.length;i++) {
+//     for(var i=0;i<r.length;i++) {`
 //       T.post('favorites/create/'+r[i].id_str,{},function(){});
 //     }
 //     console.log('harvested some RTs'); 
