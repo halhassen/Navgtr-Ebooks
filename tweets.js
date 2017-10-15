@@ -3,7 +3,7 @@ var Twit = require('twit');
 // START HEROKU SETUP
 var express = require("express");
 var app = express();
-app.get('/', function(req, res){ res.send(georgeTweet()); });
+app.get('/', function(req, res){ res.send("George Wood is reviewing"); });
 app.listen(process.env.PORT || 5000);
 // END HEROKU SETUP
 // Load environment variables
