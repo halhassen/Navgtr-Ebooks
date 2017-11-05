@@ -1,5 +1,6 @@
 var restclient = require('node-restclient');
 var Twit = require('twit');
+var TwitterBot = require('node-twitterbot').TwitterBot;
 // START HEROKU SETUP
 var express = require("express");
 var app = express();
@@ -10,7 +11,7 @@ app.listen(process.env.PORT || 5000);
 require('dotenv').load();
 
 // insert your twitter app info here
-var T = new Twit({
+var T = new TwitterBot({
 	consumer_key:         process.env.CONSUMER_KEY, 
 	consumer_secret:      process.env.CONSUMER_SECRET,
 	access_token:         process.env.ACCESS_TOKEN,
@@ -329,10 +330,13 @@ function georgeTweet() {
   }
   finishedQuotes.push(randomQuote);
     // Below is the function that posts a tweet
-    T.post('statuses/update', { status: randomQuote}, function(err, reply) {
-      //console.log("error: " + err);
-      console.log("reply: " + randomQuote);
-  });
+    // This is the Twit way to do it. Disabled for now.
+  //   T.post('statuses/update', { status: randomQuote}, function(err, reply) {
+  //     //console.log("error: " + err);
+  //     console.log("reply: " + randomQuote);
+  // });
+  T.tweet(randomQuote);
+  console.log(randomQuote);
 }
 
 

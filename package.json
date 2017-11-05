@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/halhassen/Navgtr-Ebooks#readme",
   "dependencies": {
-    "dotenv": "^4.0.0"
+    "dotenv": "^4.0.0",
+    "node-twitterbot": "^0.2.2"
   }
 }
