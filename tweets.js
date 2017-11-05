@@ -360,7 +360,8 @@ function georgeTweet() {
 // },1800000);
 
 
-// With Heroku scheduler, the above setInterval is not needed
+// With Heroku scheduler, the above setInterval is not needed: https://medium.com/@mattpopovich/how-to-build-and-deploy-a-simple-twitter-bot-super-fast-with-node-js-and-heroku-7b322dbb5dd3
+// If the Heroku Scheduler addon becomes deprecated, look to other options
 georgeTweet();
 
 
