@@ -350,15 +350,18 @@ function georgeTweet() {
 // wrapped in a try/catch in case Twitter is unresponsive, don't really care about error
 // handling. it just won't tweet.
 // 1800000 equals 30 minutes
-setInterval(function() {
-	try {
-		georgeTweet();
-	}
-	catch (e) {
-		console.log(e);
-	}
-},1800000);
+// setInterval(function() {
+// 	try {
+// 		georgeTweet();
+// 	}
+// 	catch (e) {
+// 		console.log(e);
+// 	}
+// },1800000);
 
+
+// With Heroku scheduler, the above setInterval is not needed
+georgeTweet();
 
 
 // every 5 hours, check for people who have RTed a metaphor, and favorite that metaphor
