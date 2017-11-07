@@ -2,10 +2,10 @@ var restclient = require('node-restclient');
 var Twit = require('twit');
 var TwitterBot = require('node-twitterbot').TwitterBot;
 // START HEROKU SETUP
-var express = require("express");
-var app = express();
-app.get('/', function(req, res){ res.send("George Wood is reviewing"); });
-app.listen(process.env.PORT || 5000);
+// var express = require("express");
+// var app = express();
+// app.get('/', function(req, res){ res.send("George Wood is reviewing"); });
+// app.listen(process.env.PORT || 5000);
 // END HEROKU SETUP
 // Load environment variables
 require('dotenv').load();
