@@ -2,13 +2,13 @@ var restclient = require('node-restclient');
 var Twit = require('twit');
 var TwitterBot = require('node-twitterbot').TwitterBot;
 // START HEROKU SETUP
-// var express = require("express");
-// var app = express();
-// app.get('/', function(req, res){ res.send("George Wood is reviewing"); });
-// app.listen(process.env.PORT || 5000);
-// // END HEROKU SETUP
-// // Load environment variables
-// require('dotenv').load();
+var express = require("express");
+var app = express();
+app.get('/', function(req, res){ res.send("George Wood is reviewing"); });
+app.listen(process.env.PORT || 3000);
+// END HEROKU SETUP
+// Load environment variables
+require('dotenv').load();
 
 // insert your twitter app info here
 var T = new TwitterBot({
@@ -367,6 +367,7 @@ function georgeTweet() {
 
 // With Heroku scheduler, the above setInterval is not needed: https://medium.com/@mattpopovich/how-to-build-and-deploy-a-simple-twitter-bot-super-fast-with-node-js-and-heroku-7b322dbb5dd3
 // If the Heroku Scheduler addon becomes deprecated, look to other options
+
 georgeTweet();
 
 
