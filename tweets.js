@@ -6,9 +6,9 @@ var TwitterBot = require('node-twitterbot').TwitterBot;
 // var app = express();
 // app.get('/', function(req, res){ res.send("George Wood is reviewing"); });
 // app.listen(process.env.PORT || 5000);
-// END HEROKU SETUP
-// Load environment variables
-require('dotenv').load();
+// // END HEROKU SETUP
+// // Load environment variables
+// require('dotenv').load();
 
 // insert your twitter app info here
 var T = new TwitterBot({
@@ -339,6 +339,7 @@ function georgeTweet() {
   console.log(randomQuote);
 }
 
+// Work to read previous tweets of mine to prevent duplicates using the API?
 
 // Functionality if I want to include favoriting quote retweets of my tweets
 // function favRTs () {
