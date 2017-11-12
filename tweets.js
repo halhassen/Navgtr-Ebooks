@@ -11,7 +11,7 @@ app.listen(process.env.PORT || 3000);
 require('dotenv').load();
 
 // insert your twitter app info here
-var T = new TwitterBot({
+var T = new Twit({
 	consumer_key:         process.env.CONSUMER_KEY, 
 	consumer_secret:      process.env.CONSUMER_SECRET,
 	access_token:         process.env.ACCESS_TOKEN,
@@ -331,12 +331,13 @@ function georgeTweet() {
   finishedQuotes.push(randomQuote);
     // Below is the function that posts a tweet
     // This is the Twit way to do it. Disabled for now.
-  //   T.post('statuses/update', { status: randomQuote}, function(err, reply) {
-  //     //console.log("error: " + err);
-  //     console.log("reply: " + randomQuote);
-  // });
-  T.tweet(randomQuote);
-  console.log(randomQuote);
+    T.post('statuses/update', { status: randomQuote}, function(err, reply) {
+    	console.log("reply: " + randomQuote);
+    });
+
+  // TwitterBot way of tweeting
+  // T.tweet(randomQuote);
+  // console.log(randomQuote);
 }
 
 // Work to read previous tweets of mine to prevent duplicates using the API?
