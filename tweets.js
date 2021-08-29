@@ -293,7 +293,60 @@ var gwQuotes = [
 "Six: cross the Pinedale Bridge after you get a tool.",
 "Eight: where would you wrench a wheel free?",
 "Nine: get 10 treasures in the mine before your big, long, ride.",
-"Overall, Young Merlin from Virgin, is high quality all the way around."
+"Overall, Young Merlin from Virgin, is high quality all the way around.",
+// 1080 Snowboarding
+"We wish we could show you all the cool secrets of 1080 Snowboarding.",
+"New tracks giving your character a body of ice, the head of a panda, or a snowboard shaped like a penguin.",
+"We're not joking either.",
+"These nifty bonuses can only be accessed if you beat the game in every mode in the expert level.",
+"In other words, forget about it.",
+"And yet another provides two player action.",
+"The tricks are harder to master",
+"But Nintendo deserves a big fat kiss.",
+"Even the hardest move, the 1080 Air, is manageable under this system.",
+"The game is still hard though, like Diddy Kong Racing.",
+"The game's best feature is the graphics.",
+"Each level has the look and feel of being one with nature.",
+"The lighting is oh so gorgeous.",
+"You'll need a bib to catch the drool from admiring the landscapes.",
+"1080 Snowboarding is the best game on the Nintendo 64 this year.",
+"The lack of chasmic jumps. Chasmic may not be a real word, but it should be.",
+"Is it realistic? Heck no!",
+"But realism is boring in video games.",
+"Each snowboarder is hanging out in the ski lodge. Makes sense, huh.",
+"Unfortunately, the game includes no female snowboarders and a Canadian snowboarder would have been a real treat.",
+"A lot more exciting than the incorporation of Tommy Hillfinger clothes. By the way, if I mispronounced the name, you can chalk it up to my age or pure apathy.",
+"All modes are worth your attention.",
+"So even non-sports fans may want to buy it.",
+"Congratulations Nintendo, once again you've snuck another surprise hit into the world of gaming.",
+// FF 8
+"I'm going to start out by taking you through this first part of the game  step by step.",
+"You begin with Squall, an anti-social garden military trainee who is yet to meet the love of his life.",
+"First off, if this storyline is truly to reach epic levels, then I hope one of the lovers dies.",
+"From Shakespeare, to the English Patient, to the Titanic, death has proven to be the most effective instrument of high romantic drama.",
+"As you can see, the full motion video is impressive, but sometimes the characters feel dead inside.",
+"But sometimes the characters feel dead inside. They're too mechanical.",
+"Rinoa's eyes aren't lively enough and Squall's face shows no character.",
+"He's overidealized and the emptiness he feels inside isn't quite captured in his eyes and facial expressions.",
+"If you think Squall looks young, check out Zell the ultimate geekazoid.",
+"Look how he smiles right into the camera.",
+"Can you get any cheesier than that?",
+"When you're in class, go into the tutorial in the study panel on your desk.",
+"Here you can download your first two guardian forces, or GFs.",
+"Shiva''s elemental magic is ice, so she's effective against fire enemies.",
+"Once you download the GFs, leave the classroom.",
+"When you run into Selphie, tell her you don't have time to give her a tour.",
+"Talk to her and then leave the irritating music of Belamb Garden.",
+"Welcome to the overworld, home of dated PlayStation graphics.",
+"If you beat him, you can equip him as a GF.",
+"You'll quickly learn the only way to cast non-GF magic spells is to draw the spells from your enemies while in battle.",
+"Personally, I like this system a lot.",
+"It gives weaker characters something productive to do while you wait for the impending doom of your character's GF.",
+"Sometimes only one GF will be effective on a larger enemy.",
+"The junction system is confusing at first, but you should get the hang of it in about 30 minutes.",
+"Final Fantasy VIII is a must-buy. It's not perfect and as of yet the story is more plot driven than character driven, but this game is perphaps the most engaging RPG of all time.",
+"While traditional RPG elements like armor and money are less apparent in this title, it's a nice change of pace without them.",
+"Oh by the way, if Square doesn't add voice overs to Final Fantasy IX, I'm committing suicide. I hate text."
 ];
 
 Array.prototype.randomElement = function () {
@@ -303,7 +356,7 @@ Array.prototype.randomElement = function () {
 // Below function is used to test if any quotes in the array are more than 140 characters
 function tweetCheck(arr) {
 	var characterCheck = arr.filter(function(quote) {
-		return quote.length > 140;
+		return quote.length > 280;
 	})
 	return characterCheck;
 }
