@@ -360,7 +360,7 @@ function tweetCheck(arr) {
 	})
 	return characterCheck;
 }
-console.log(tweetCheck(gwQuotes);
+console.log(tweetCheck(gwQuotes));
 // Holds quotes used so quotes don't repeat until all others are tweeted
 var finishedQuotes = [];
 
