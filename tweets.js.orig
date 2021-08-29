@@ -296,7 +296,11 @@ var gwQuotes = [
 "Overall, Young Merlin from Virgin, is high quality all the way around.",
 // 1080 Snowboarding
 "We wish we could show you all the cool secrets of 1080 Snowboarding.",
+<<<<<<< HEAD
 "New tracks giving your character a body of ice, the head of a panda, or a snowboard shaped like a penguin.",
+=======
+"New tracks giving your character a body of ice, the head of a panda, or a snowboard shaped like a penguin."
+>>>>>>> 729b3106dc8e254462b1dedf170713565948f34a
 "We're not joking either.",
 "These nifty bonuses can only be accessed if you beat the game in every mode in the expert level.",
 "In other words, forget about it.",
@@ -360,7 +364,10 @@ function tweetCheck(arr) {
 	})
 	return characterCheck;
 }
-console.log(tweetCheck(gwQuotes);
+
+console.log(tweetCheck(gwQuotes));
+
+
 // Holds quotes used so quotes don't repeat until all others are tweeted
 var finishedQuotes = [];
 
