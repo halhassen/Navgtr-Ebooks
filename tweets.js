@@ -1,4 +1,4 @@
-var restclient = require('node-restclient');
+//var restclient = require('node-restclient');
 var Twit = require('twit');
 var TwitterBot = require('node-twitterbot').TwitterBot;
 // START HEROKU SETUP
