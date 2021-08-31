@@ -61,7 +61,7 @@ var gwQuotes = [
 "Imagine the drama of a vulnerable Lara Croft, still persisting in her worldly adventures despite her illness.",
 "It needs fleshing out, no pun intended.",
 "Moved at the effort to make Lara's character more meaningful.",
-"We love Lara",
+"We love Lara,",
 "It's about time the industry had a big shock for a change.",
 "Everyone should buy it. Period. The end.",
 // Super Mario RPG
